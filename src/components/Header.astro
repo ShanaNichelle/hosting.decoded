@@ -1,58 +1,127 @@
 ---
 import { SITE_TITLE } from '../consts';
-import HeaderLink from './HeaderLink.astro';
+
+interface Props {
+	activeCategory?: string;
+}
+
+const { activeCategory = '' } = Astro.props;
+const path = Astro.url.pathname;
+
+function isActive(href: string) {
+	if (href === '/') return path === '/' ? 'active' : '';
+	return path === href || path.startsWith(href + '/') ? 'active' : '';
+}
 ---
 
 <header>
-	<nav>
-		<h2><a href="/">{SITE_TITLE}</a></h2>
-		<div class="internal-links">
-			<HeaderLink href="/">Home</HeaderLink>
-			<HeaderLink href="/blog">Blog</HeaderLink>
-			<HeaderLink href="/about">About</HeaderLink>
-		</div>
-		<div class="social-links">
-		</div>
-	</nav>
+	<div class="header-inner">
+		<a href="/" class="brand" aria-label={SITE_TITLE}>
+			<img src="/logo.png" alt={SITE_TITLE} class="logo" />
+		</a>
+
+		<nav class="cat-nav" aria-label="Categories">
+			<a href="/blog/hosting-101" class={isActive('/blog/hosting-101')}>Hosting 101</a>
+			<span class="divider" aria-hidden="true">|</span>
+			<a href="/blog/guest-experience" class={isActive('/blog/guest-experience')}>Guest Experience</a>
+			<span class="divider" aria-hidden="true">|</span>
+			<a href="/blog/earnings" class={isActive('/blog/earnings')}>Earnings</a>
+		</nav>
+
+		<nav class="main-nav" aria-label="Main">
+			<a href="/" class={isActive('/')}>Home</a>
+			<a href="/about" class={isActive('/about')}>About</a>
+			<a href="/subscribe" class="subscribe-btn">Subscribe</a>
+		</nav>
+	</div>
 </header>
+
 <style>
 	header {
-		margin: 0;
-		padding: 0 1em;
-		background: white;
-		box-shadow: 0 2px 8px rgba(var(--black), 5%);
-	}
-	h2 {
-		margin: 0;
-		font-size: 1em;
+		background: var(--background);
+		border-bottom: 1px solid rgba(61, 35, 20, 0.1);
 	}
 
-	h2 a,
-	h2 a.active {
-		text-decoration: none;
+	.header-inner {
+		display: grid;
+		grid-template-columns: auto 1fr auto;
+		align-items: center;
+		gap: 2rem;
+		max-width: 1160px;
+		margin: 0 auto;
+		padding: 0 2rem;
+		height: 62px;
 	}
-	nav {
+
+	/* Logo */
+	.brand { display: flex; align-items: center; }
+	.logo {
+		height: 36px;
+		width: auto;
+		display: block;
+	}
+
+	/* Category nav — centered */
+	.cat-nav {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: center;
+		gap: 0.65rem;
 	}
-	nav a {
-		padding: 1em 0.5em;
-		color: var(--black);
-		border-bottom: 4px solid transparent;
+	.cat-nav a {
+		font-size: 0.8rem;
+		color: var(--chocolate);
 		text-decoration: none;
+		white-space: nowrap;
+		opacity: 0.6;
+		padding-bottom: 2px;
+		border-bottom: 2px solid transparent;
+		transition: opacity 0.15s, border-color 0.15s, color 0.15s;
 	}
-	nav a.active {
-		text-decoration: none;
-		border-bottom-color: var(--accent);
+	.cat-nav a:hover       { opacity: 1; color: var(--primary); }
+	.cat-nav a.active      { opacity: 1; border-bottom-color: var(--chocolate); }
+
+	.divider {
+		font-size: 0.65rem;
+		color: rgba(61, 35, 20, 0.2);
 	}
-	.social-links,
-	.social-links a {
+
+	/* Main nav — right */
+	.main-nav {
 		display: flex;
+		align-items: center;
+		gap: 1.25rem;
 	}
-	@media (max-width: 720px) {
-		.social-links {
-			display: none;
-		}
+	.main-nav a {
+		font-size: 0.8rem;
+		color: var(--chocolate);
+		text-decoration: none;
+		opacity: 0.6;
+		transition: opacity 0.15s, color 0.15s;
+		white-space: nowrap;
+	}
+	.main-nav a:hover  { opacity: 1; color: var(--primary); }
+	.main-nav a.active { opacity: 1; font-weight: 600; }
+
+	.subscribe-btn {
+		display: inline-block;
+		padding: 0.45em 1.1em;
+		background: var(--chocolate);
+		color: var(--cream) !important;
+		border-radius: 4px;
+		font-weight: 600;
+		opacity: 1 !important;
+		transition: background 0.2s;
+	}
+	.subscribe-btn:hover {
+		background: var(--primary);
+	}
+
+	@media (max-width: 820px) {
+		.cat-nav { display: none; }
+		.header-inner { grid-template-columns: 1fr auto; }
+	}
+	@media (max-width: 480px) {
+		.main-nav a:not(.subscribe-btn) { display: none; }
 	}
 </style>

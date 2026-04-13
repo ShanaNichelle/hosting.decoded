@@ -7,108 +7,340 @@ import FormattedDate from '../../components/FormattedDate.astro';
 import Header from '../../components/Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
 
-const posts = (await getCollection('blog')).sort(
-	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+const allPosts = (await getCollection('blog')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
+
+const featuredPost = allPosts[0];
+const recentPosts  = allPosts.slice(1, 5);
+
+const editorialPosts = allPosts.slice(5);
+const editorialRows: { lead: typeof allPosts[0]; cards: typeof allPosts }[] = [];
+for (let i = 0; i < editorialPosts.length; i += 3) {
+	editorialRows.push({
+		lead:  editorialPosts[i],
+		cards: editorialPosts.slice(i + 1, i + 3),
+	});
+}
+
+function cc(cat?: string) {
+	return cat ? cat.toLowerCase().replace(/\s+/g, '-') : '';
+}
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<style>
-			main {
-				width: 960px;
-			}
-			ul {
-				display: flex;
-				flex-wrap: wrap;
-				gap: 2rem;
-				list-style-type: none;
-				margin: 0;
-				padding: 0;
-			}
-			ul li {
-				width: calc(50% - 1rem);
-			}
-			ul li * {
-				text-decoration: none;
-				transition: 0.2s ease;
-			}
-			ul li:first-child {
-				width: 100%;
-				margin-bottom: 1rem;
-				text-align: center;
-			}
-			ul li:first-child img {
-				width: 100%;
-			}
-			ul li:first-child .title {
-				font-size: 2.369rem;
-			}
-			ul li img {
-				margin-bottom: 0.5rem;
-				border-radius: 12px;
-			}
-			ul li a {
-				display: block;
-			}
-			.title {
-				margin: 0;
-				color: rgb(var(--black));
-				line-height: 1;
-			}
-			.date {
-				margin: 0;
-				color: rgb(var(--gray));
-			}
-			ul li a:hover h4,
-			ul li a:hover .date {
-				color: rgb(var(--accent));
-			}
-			ul a:hover img {
-				box-shadow: var(--box-shadow);
-			}
-			@media (max-width: 720px) {
-				ul {
-					gap: 0.5em;
-				}
-				ul li {
-					width: 100%;
-					text-align: center;
-				}
-				ul li:first-child {
-					margin-bottom: 0;
-				}
-				ul li:first-child .title {
-					font-size: 1.563em;
-				}
-			}
-		</style>
+		<BaseHead title={`Blog — ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
 	</head>
 	<body>
 		<Header />
-		<main>
-			<section>
-				<ul>
-					{
-						posts.map((post) => (
-							<li>
-								<a href={`/blog/${post.id}/`}>
-									{post.data.heroImage && (
-										<Image width={720} height={360} src={post.data.heroImage} alt="" />
-									)}
-									<h4 class="title">{post.data.title}</h4>
-									<p class="date">
-										<FormattedDate date={post.data.pubDate} />
-									</p>
-								</a>
-							</li>
-						))
-					}
-				</ul>
-			</section>
-		</main>
+
+		<div class="wrap">
+
+			<!-- ── Masthead ────────────────────────────────── -->
+			<div class="masthead">
+				<p class="eyebrow">The Blog</p>
+				<h1>All Articles</h1>
+			</div>
+
+			<hr class="rule" />
+
+			<!-- ── Featured + Recent ─────────────────────── -->
+			{featuredPost && (
+				<section class="split">
+					<div class="split-left">
+						<p class="col-label">Featured</p>
+						<a href={`/blog/${featuredPost.id}/`} class="card-featured">
+							{featuredPost.data.heroImage && (
+								<div class="img-featured">
+									<Image
+										width={760}
+										height={440}
+										src={featuredPost.data.heroImage}
+										alt={featuredPost.data.title}
+									/>
+								</div>
+							)}
+							<div class="card-meta">
+								{featuredPost.data.category && (
+									<span class={`cat ${cc(featuredPost.data.category)}`}>
+										{featuredPost.data.category}
+									</span>
+								)}
+								<span class="dot">·</span>
+								<span class="date"><FormattedDate date={featuredPost.data.pubDate} /></span>
+							</div>
+							<h2 class="title-featured">{featuredPost.data.title}</h2>
+							<p class="desc">{featuredPost.data.description}</p>
+						</a>
+					</div>
+
+					{recentPosts.length > 0 && (
+						<div class="split-right">
+							<p class="col-label">Recent</p>
+							<div class="recent-grid">
+								{recentPosts.map((post) => (
+									<a href={`/blog/${post.id}/`} class="card-small">
+										{post.data.heroImage && (
+											<div class="img-small">
+												<Image
+													width={380}
+													height={240}
+													src={post.data.heroImage}
+													alt={post.data.title}
+												/>
+											</div>
+										)}
+										<div class="card-meta">
+											{post.data.category && (
+												<span class={`cat ${cc(post.data.category)}`}>
+													{post.data.category}
+												</span>
+											)}
+											<span class="dot">·</span>
+											<span class="date"><FormattedDate date={post.data.pubDate} /></span>
+										</div>
+										<h3 class="title-small">{post.data.title}</h3>
+									</a>
+								))}
+							</div>
+						</div>
+					)}
+				</section>
+			)}
+
+			<!-- ── Editorial rows ────────────────────────── -->
+			{editorialRows.map((row) => (
+				<>
+					<hr class="rule" />
+					<section class="split editorial">
+						<a href={`/blog/${row.lead.id}/`} class="card-editorial">
+							{row.lead.data.category && (
+								<span class={`cat ${cc(row.lead.data.category)}`}>
+									{row.lead.data.category}
+								</span>
+							)}
+							<h2 class="title-editorial">{row.lead.data.title}</h2>
+							<p class="desc">{row.lead.data.description}</p>
+							<span class="date"><FormattedDate date={row.lead.data.pubDate} /></span>
+						</a>
+
+						{row.cards.length > 0 && (
+							<div class="split-right">
+								<div class="recent-grid">
+									{row.cards.map((post) => (
+										<a href={`/blog/${post.id}/`} class="card-small">
+											{post.data.heroImage && (
+												<div class="img-small">
+													<Image
+														width={380}
+														height={240}
+														src={post.data.heroImage}
+														alt={post.data.title}
+													/>
+												</div>
+											)}
+											<div class="card-meta">
+												{post.data.category && (
+													<span class={`cat ${cc(post.data.category)}`}>
+														{post.data.category}
+													</span>
+												)}
+												<span class="dot">·</span>
+												<span class="date"><FormattedDate date={post.data.pubDate} /></span>
+											</div>
+											<h3 class="title-small">{post.data.title}</h3>
+										</a>
+									))}
+								</div>
+							</div>
+						)}
+					</section>
+				</>
+			))}
+
+		</div>
+
 		<Footer />
 	</body>
 </html>
+
+<style>
+.wrap {
+	max-width: 1160px;
+	margin: 0 auto;
+	padding: 0 2rem 5rem;
+}
+
+.rule {
+	border: none;
+	border-top: 1px solid rgba(61, 35, 20, 0.1);
+	margin: 2.5rem 0;
+}
+
+/* ── Masthead ─────────────────────────────────────────── */
+.masthead { padding: 3rem 0 2.5rem; }
+.eyebrow {
+	font-size: 0.68rem;
+	font-weight: 700;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	color: var(--primary);
+	margin: 0 0 0.5rem;
+}
+.masthead h1 {
+	font-size: clamp(2.2rem, 5vw, 3.5rem);
+	font-weight: 700;
+	color: var(--chocolate);
+	margin: 0;
+}
+
+/* ── Shared ───────────────────────────────────────────── */
+.col-label {
+	font-size: 0.68rem;
+	font-weight: 700;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	color: rgba(61, 35, 20, 0.35);
+	margin: 0 0 0.9rem;
+}
+
+.card-meta {
+	display: flex;
+	align-items: center;
+	gap: 0.4rem;
+	margin-bottom: 0.35rem;
+}
+.cat {
+	font-size: 0.68rem;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: rgba(61, 35, 20, 0.45);
+}
+.cat.hosting-101      { color: var(--primary); }
+.cat.guest-experience { color: var(--link); }
+.cat.earnings         { color: #8a6d10; }
+.dot { font-size: 0.65rem; color: rgba(61, 35, 20, 0.25); }
+.date { font-size: 0.68rem; color: rgba(61, 35, 20, 0.35); }
+
+/* ── Split ────────────────────────────────────────────── */
+.split {
+	display: grid;
+	grid-template-columns: 1fr 340px;
+	gap: 3rem;
+	align-items: start;
+}
+.split.editorial { align-items: center; }
+.split-left, .split-right { display: flex; flex-direction: column; }
+
+/* ── Featured card ────────────────────────────────────── */
+.card-featured {
+	text-decoration: none;
+	color: inherit;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+.card-featured:hover .title-featured { color: var(--primary); }
+
+.img-featured {
+	width: 100%;
+	height: 320px;
+	overflow: hidden;
+	border-radius: 5px;
+	margin-bottom: 0.75rem;
+}
+.img-featured :global(img) {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+	transition: transform 0.4s ease;
+}
+.card-featured:hover .img-featured :global(img) { transform: scale(1.02); }
+
+.title-featured {
+	font-size: clamp(1.25rem, 2.2vw, 1.6rem);
+	font-weight: 700;
+	line-height: 1.2;
+	color: var(--chocolate);
+	margin: 0 0 0.25rem;
+	transition: color 0.15s;
+}
+.desc {
+	font-size: 0.875rem;
+	color: rgba(61, 35, 20, 0.55);
+	line-height: 1.6;
+	margin: 0;
+}
+
+/* ── Recent 2×2 ───────────────────────────────────────── */
+.recent-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1.25rem;
+}
+.card-small {
+	text-decoration: none;
+	color: inherit;
+	display: flex;
+	flex-direction: column;
+	gap: 0.4rem;
+}
+.card-small:hover .title-small { color: var(--primary); }
+
+.img-small {
+	width: 100%;
+	height: 120px;
+	overflow: hidden;
+	border-radius: 4px;
+	margin-bottom: 0.4rem;
+}
+.img-small :global(img) {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+	transition: transform 0.4s ease;
+}
+.card-small:hover .img-small :global(img) { transform: scale(1.04); }
+
+.title-small {
+	font-size: 0.9rem;
+	font-weight: 600;
+	line-height: 1.3;
+	color: var(--chocolate);
+	margin: 0;
+	transition: color 0.15s;
+}
+
+/* ── Editorial text card ──────────────────────────────── */
+.card-editorial {
+	text-decoration: none;
+	color: inherit;
+	display: flex;
+	flex-direction: column;
+	gap: 0.6rem;
+}
+.card-editorial:hover .title-editorial { color: var(--primary); }
+.title-editorial {
+	font-size: clamp(1.75rem, 3vw, 2.5rem);
+	font-weight: 700;
+	line-height: 1.15;
+	color: var(--chocolate);
+	margin: 0;
+	transition: color 0.15s;
+}
+
+/* ── Responsive ───────────────────────────────────────── */
+@media (max-width: 860px) {
+	.split { grid-template-columns: 1fr; gap: 2rem; }
+	.img-featured { height: 260px; }
+}
+@media (max-width: 520px) {
+	.wrap { padding: 0 1rem 3rem; }
+	.masthead { padding: 2rem 0 1.5rem; }
+}
+</style>

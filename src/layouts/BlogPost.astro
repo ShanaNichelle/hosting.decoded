@@ -8,79 +8,218 @@ import Header from '../components/Header.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, category } = Astro.props;
+
+function catClass(cat?: string) {
+	return cat ? cat.toLowerCase().replace(/\s+/g, '-') : '';
+}
 ---
 
 <html lang="en">
 	<head>
 		<BaseHead title={title} description={description} />
-		<style>
-			main {
-				width: calc(100% - 2em);
-				max-width: 100%;
-				margin: 0;
-			}
-			.hero-image {
-				width: 100%;
-			}
-			.hero-image img {
-				display: block;
-				margin: 0 auto;
-				border-radius: 12px;
-				box-shadow: var(--box-shadow);
-			}
-			.prose {
-				width: 720px;
-				max-width: calc(100% - 2em);
-				margin: auto;
-				padding: 1em;
-				color: rgb(var(--gray-dark));
-			}
-			.title {
-				margin-bottom: 1em;
-				padding: 1em 0;
-				text-align: center;
-				line-height: 1;
-			}
-			.title h1 {
-				margin: 0 0 0.5em 0;
-			}
-			.date {
-				margin-bottom: 0.5em;
-				color: rgb(var(--gray));
-			}
-			.last-updated-on {
-				font-style: italic;
-			}
-		</style>
 	</head>
 
 	<body>
 		<Header />
-		<main>
-			<article>
-				<div class="hero-image">
-					{heroImage && <Image width={1020} height={510} src={heroImage} alt="" />}
+
+		<main class="page-wrap">
+
+			<hr class="rule rule--top" />
+
+			<!-- Article header -->
+			<div class="article-header">
+				<div class="article-meta-row">
+					{category && (
+						<span class={`cat-label ${catClass(category)}`}>{category.toUpperCase()}</span>
+					)}
+					<span class="meta-dot" aria-hidden="true">·</span>
+					<span class="meta-date"><FormattedDate date={pubDate} /></span>
+					{updatedDate && (
+						<>
+							<span class="meta-dot" aria-hidden="true">·</span>
+							<span class="meta-date" style="font-style:italic">
+								Updated <FormattedDate date={updatedDate} />
+							</span>
+						</>
+					)}
 				</div>
-				<div class="prose">
-					<div class="title">
-						<div class="date">
-							<FormattedDate date={pubDate} />
-							{
-								updatedDate && (
-									<div class="last-updated-on">
-										Last updated on <FormattedDate date={updatedDate} />
-									</div>
-								)
-							}
-						</div>
-						<h1>{title}</h1>
-						<hr />
-					</div>
+
+				<h1 class="article-title">{title}</h1>
+
+				{description && (
+					<p class="article-description">{description}</p>
+				)}
+			</div>
+
+			<!-- Hero image -->
+			{heroImage && (
+				<div class="hero-image-wrap">
+					<Image
+						width={1100}
+						height={500}
+						src={heroImage}
+						alt={title}
+						class="hero-image"
+					/>
+				</div>
+			)}
+
+			<!-- Prose content -->
+			<div class="prose-wrap">
+				<hr class="rule" />
+				<article class="prose">
 					<slot />
-				</div>
-			</article>
+				</article>
+
+				<hr class="rule" />
+
+				<a href="/blog" class="back-link">← All Articles</a>
+			</div>
+
 		</main>
+
 		<Footer />
 	</body>
 </html>
+
+<style>
+.page-wrap {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 2rem 5rem;
+}
+
+.rule {
+	border: none;
+	border-top: 1px solid rgba(61, 35, 20, 0.12);
+	margin: 2.5rem 0;
+}
+.rule--top { margin-top: 0; }
+
+/* ── Article header ───────────────────────────────────── */
+.article-header {
+	padding: 2.5rem 0 2rem;
+	max-width: 780px;
+}
+
+.article-meta-row {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	margin-bottom: 1rem;
+}
+.cat-label {
+	font-size: 0.7rem;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+	color: rgba(61, 35, 20, 0.5);
+}
+.cat-label.hosting-101      { color: var(--primary); }
+.cat-label.guest-experience { color: var(--link); }
+.cat-label.earnings         { color: #8a6d10; }
+
+.meta-dot {
+	font-size: 0.7rem;
+	color: rgba(61, 35, 20, 0.3);
+}
+.meta-date {
+	font-size: 0.72rem;
+	color: rgba(61, 35, 20, 0.45);
+}
+
+.article-title {
+	font-size: clamp(2rem, 5vw, 3.25rem);
+	font-weight: 700;
+	line-height: 1.15;
+	color: var(--chocolate);
+	margin: 0 0 1rem 0;
+}
+.article-description {
+	font-size: 1.1rem;
+	color: rgba(61, 35, 20, 0.6);
+	line-height: 1.65;
+	margin: 0;
+	max-width: 640px;
+}
+
+/* ── Hero image ───────────────────────────────────────── */
+.hero-image-wrap {
+	margin-bottom: 0;
+}
+.hero-image {
+	width: 100%;
+	height: 480px;
+	object-fit: cover;
+	border-radius: 6px;
+	display: block;
+}
+
+/* ── Prose ────────────────────────────────────────────── */
+.prose-wrap {
+	max-width: 720px;
+}
+.prose {
+	font-size: 1.05rem;
+	line-height: 1.8;
+	color: var(--chocolate);
+}
+.prose :global(h2) {
+	font-size: 1.5rem;
+	margin-top: 2.5em;
+	margin-bottom: 0.5em;
+}
+.prose :global(h3) {
+	font-size: 1.2rem;
+	margin-top: 2em;
+	margin-bottom: 0.4em;
+}
+.prose :global(ul),
+.prose :global(ol) {
+	padding-left: 1.5em;
+	margin-bottom: 1.5em;
+}
+.prose :global(li) { margin-bottom: 0.4em; }
+.prose :global(a) { color: var(--link); }
+.prose :global(a:hover) { color: var(--primary); }
+.prose :global(strong) { font-weight: 700; }
+.prose :global(blockquote) {
+	border-left: 3px solid var(--primary);
+	padding: 0.25em 0 0.25em 1.25em;
+	margin: 2em 0;
+	font-family: 'Playfair Display', Georgia, serif;
+	font-style: italic;
+	font-size: 1.15em;
+}
+.prose :global(code) {
+	font-size: 0.875em;
+	background: var(--cream);
+	padding: 2px 6px;
+	border-radius: 4px;
+}
+.prose :global(pre) {
+	background: var(--cream);
+	padding: 1.5em;
+	border-radius: 8px;
+	overflow-x: auto;
+	margin: 1.5em 0;
+}
+
+/* ── Back link ────────────────────────────────────────── */
+.back-link {
+	font-size: 0.85rem;
+	font-weight: 600;
+	color: var(--chocolate);
+	text-decoration: none;
+	opacity: 0.6;
+	transition: opacity 0.15s;
+}
+.back-link:hover { opacity: 1; color: var(--primary); }
+
+/* ── Responsive ───────────────────────────────────────── */
+@media (max-width: 720px) {
+	.page-wrap { padding: 0 1rem 3rem; }
+	.hero-image { height: 260px; }
+	.prose { font-size: 1rem; }
+}
+</style>

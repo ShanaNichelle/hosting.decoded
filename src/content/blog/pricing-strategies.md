@@ -3,6 +3,7 @@ title: 'Smart Pricing Strategies to Maximize Your Airbnb Revenue'
 description: 'Dynamic pricing techniques that help you earn more without sacrificing occupancy.'
 pubDate: 'Apr 08 2026'
 heroImage: '../../assets/blog-placeholder-3.jpg'
+category: 'Earnings'
 ---
 
 Pricing your Airbnb correctly is both an art and a science. Price too high and your calendar stays empty; too low and you leave money on the table.

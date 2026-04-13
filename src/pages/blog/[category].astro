@@ -1,0 +1,243 @@
+---
+import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import FormattedDate from '../../components/FormattedDate.astro';
+import Header from '../../components/Header.astro';
+import { SITE_TITLE } from '../../consts';
+
+export async function getStaticPaths() {
+	const allPosts = await getCollection('blog');
+	const categories = [
+		...new Set(allPosts.map((p) => p.data.category).filter(Boolean)),
+	] as string[];
+
+	return categories.map((cat) => ({
+		params: { category: cat.toLowerCase().replace(/\s+/g, '-') },
+		props: {
+			categoryName: cat,
+			posts: allPosts
+				.filter((p) => p.data.category === cat)
+				.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()),
+		},
+	}));
+}
+
+interface Props {
+	categoryName: string;
+	posts: Awaited<ReturnType<typeof getCollection<'blog'>>>;
+}
+
+const { categoryName, posts } = Astro.props;
+
+function cc(cat?: string) {
+	return cat ? cat.toLowerCase().replace(/\s+/g, '-') : '';
+}
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead
+			title={`${categoryName} — ${SITE_TITLE}`}
+			description={`Browse all ${categoryName} articles on ${SITE_TITLE}`}
+		/>
+	</head>
+	<body>
+		<Header activeCategory={Astro.url.pathname} />
+
+		<div class="wrap">
+			<h1 class="page-title">{categoryName}</h1>
+
+			{posts.length > 0 ? (
+				<div class="grid">
+					{posts.map((post) => (
+						<a href={`/blog/${post.id}/`} class="card">
+							{post.data.heroImage && (
+								<div class="card-img">
+									<Image
+										width={560}
+										height={360}
+										src={post.data.heroImage}
+										alt={post.data.title}
+									/>
+								</div>
+							)}
+							<div class="card-meta">
+								<span class={`cat ${cc(post.data.category)}`}>
+									{post.data.category?.toUpperCase()}
+								</span>
+								<span class="dot">·</span>
+								<span class="date"><FormattedDate date={post.data.pubDate} /></span>
+							</div>
+							<h2 class="card-title">{post.data.title}</h2>
+							<p class="card-desc">{post.data.description}</p>
+						</a>
+					))}
+				</div>
+			) : (
+				<p class="empty">No articles yet. Check back soon.</p>
+			)}
+		</div>
+
+		<!-- Newsletter strip -->
+		<section class="newsletter">
+			<p class="nl-heading">Get the best sent to your inbox, every month</p>
+			<div class="nl-form">
+				<input type="email" placeholder="Enter your email" aria-label="Email address" />
+				<button type="button">Subscribe</button>
+			</div>
+			<p class="nl-note">Once monthly, no spam</p>
+		</section>
+
+		<Footer />
+	</body>
+</html>
+
+<style>
+.wrap {
+	max-width: 1160px;
+	margin: 0 auto;
+	padding: 3rem 2rem 4rem;
+}
+
+.page-title {
+	font-size: clamp(2rem, 4vw, 3rem);
+	font-weight: 700;
+	color: var(--chocolate);
+	margin: 0 0 2.5rem;
+}
+
+/* ── 2-column card grid ───────────────────────────────── */
+.grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 2.5rem 3rem;
+}
+
+.card {
+	text-decoration: none;
+	color: inherit;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+.card:hover .card-title { color: var(--primary); }
+
+.card-img {
+	width: 100%;
+	height: 200px;
+	overflow: hidden;
+	border-radius: 4px;
+	margin-bottom: 0.6rem;
+}
+.card-img :global(img) {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+	transition: transform 0.4s ease;
+}
+.card:hover .card-img :global(img) { transform: scale(1.03); }
+
+.card-meta {
+	display: flex;
+	align-items: center;
+	gap: 0.4rem;
+}
+.cat {
+	font-size: 0.65rem;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: rgba(61, 35, 20, 0.45);
+}
+.cat.hosting-101      { color: var(--primary); }
+.cat.guest-experience { color: var(--link); }
+.cat.earnings         { color: #8a6d10; }
+
+.dot  { font-size: 0.6rem; color: rgba(61, 35, 20, 0.25); }
+.date { font-size: 0.65rem; color: rgba(61, 35, 20, 0.4); }
+
+.card-title {
+	font-size: 1.2rem;
+	font-weight: 700;
+	line-height: 1.25;
+	color: var(--chocolate);
+	margin: 0;
+	transition: color 0.15s;
+}
+.card-desc {
+	font-size: 0.85rem;
+	color: rgba(61, 35, 20, 0.55);
+	line-height: 1.6;
+	margin: 0;
+}
+
+.empty {
+	color: rgba(61, 35, 20, 0.45);
+	font-size: 0.95rem;
+}
+
+/* ── Newsletter strip ─────────────────────────────────── */
+.newsletter {
+	background: var(--chocolate);
+	padding: 4rem 2rem;
+	text-align: center;
+}
+.nl-heading {
+	font-family: 'Playfair Display', Georgia, serif;
+	font-size: clamp(1.35rem, 2.5vw, 2rem);
+	font-weight: 700;
+	color: var(--cream);
+	max-width: 520px;
+	margin: 0 auto 1.75rem;
+	line-height: 1.25;
+}
+.nl-form {
+	display: flex;
+	justify-content: center;
+	max-width: 440px;
+	margin: 0 auto;
+}
+.nl-form input {
+	flex: 1;
+	padding: 0.75em 1em;
+	font-size: 0.875rem;
+	border: none;
+	border-radius: 4px 0 0 4px;
+	background: rgba(253, 248, 243, 0.1);
+	color: var(--cream);
+	outline: none;
+	font-family: inherit;
+	border: 1.5px solid rgba(253, 248, 243, 0.2);
+	border-right: none;
+}
+.nl-form input::placeholder { color: rgba(253, 248, 243, 0.4); }
+.nl-form input:focus { border-color: var(--primary); }
+.nl-form button {
+	padding: 0.75em 1.4em;
+	background: var(--primary);
+	color: white;
+	border: none;
+	border-radius: 0 4px 4px 0;
+	font-size: 0.875rem;
+	font-weight: 700;
+	cursor: pointer;
+	font-family: inherit;
+	transition: background 0.2s;
+}
+.nl-form button:hover { background: var(--primary-dark); }
+.nl-note {
+	font-size: 0.75rem;
+	color: rgba(253, 248, 243, 0.4);
+	margin: 0.9rem 0 0;
+}
+
+/* ── Responsive ───────────────────────────────────────── */
+@media (max-width: 640px) {
+	.grid { grid-template-columns: 1fr; }
+	.wrap { padding: 2rem 1rem 3rem; }
+}
+</style>

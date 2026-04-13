@@ -3,13 +3,110 @@ const today = new Date();
 ---
 
 <footer>
-	&copy; {today.getFullYear()} Hosting Decoded. All rights reserved.
+	<div class="footer-inner">
+
+		<div class="footer-brand">
+			<img src="/logo.png" alt="Hosting Decoded" class="footer-logo-img" />
+			<p class="footer-tagline">Short-term rental insights<br />for every stage of your journey.</p>
+		</div>
+
+		<div class="footer-col">
+			<h4>Pages</h4>
+			<a href="/">Home</a>
+			<a href="/about">About</a>
+			<a href="/subscribe">Subscribe</a>
+		</div>
+
+		<div class="footer-col">
+			<h4>Categories</h4>
+			<a href="/blog">All</a>
+			<a href="/blog/hosting-101">Hosting 101</a>
+			<a href="/blog/guest-experience">Guest Experience</a>
+			<a href="/blog/earnings">Earnings</a>
+		</div>
+
+		<div class="footer-col">
+			<h4>Contact</h4>
+			<a href="/about">About Us</a>
+			<a href="/subscribe">Newsletter</a>
+		</div>
+
+		<div class="footer-col">
+			<h4>Admin</h4>
+			<p class="footer-credit">Built with Astro</p>
+			<p class="footer-credit">&copy; {today.getFullYear()} Hosting Decoded</p>
+		</div>
+
+	</div>
 </footer>
+
 <style>
 	footer {
-		padding: 2em 1em 6em 1em;
-		background: linear-gradient(var(--gray-gradient)) no-repeat;
-		color: rgb(var(--gray));
-		text-align: center;
+		background: var(--chocolate);
+	}
+
+	.footer-inner {
+		display: grid;
+		grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+		gap: 2.5rem;
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 3.5rem 2rem 4rem;
+		border-top: 1px solid rgba(253, 248, 243, 0.08);
+	}
+
+	.footer-logo-img {
+		height: 32px;
+		width: auto;
+		display: block;
+		margin-bottom: 0.75rem;
+		/* logo is dark on white — invert to show on dark background */
+		filter: brightness(0) invert(1);
+		opacity: 0.85;
+	}
+	.footer-tagline {
+		font-size: 0.82rem;
+		color: rgba(253, 248, 243, 0.45);
+		line-height: 1.6;
+		margin: 0;
+	}
+
+	.footer-col h4 {
+		font-family: var(--font-atkinson), sans-serif;
+		font-size: 0.68rem;
+		font-weight: 700;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: rgba(253, 248, 243, 0.5);
+		margin: 0 0 0.9rem 0;
+	}
+	.footer-col {
+		display: flex;
+		flex-direction: column;
+		gap: 0.1rem;
+	}
+	.footer-col a {
+		font-size: 0.875rem;
+		color: rgba(253, 248, 243, 0.7);
+		text-decoration: none;
+		padding: 0.2rem 0;
+		transition: color 0.15s;
+	}
+	.footer-col a:hover { color: var(--primary); }
+
+	.footer-credit {
+		font-size: 0.8rem;
+		color: rgba(253, 248, 243, 0.35);
+		margin: 0;
+		padding: 0.2rem 0;
+		line-height: 1.5;
+	}
+
+	@media (max-width: 900px) {
+		.footer-inner { grid-template-columns: 1fr 1fr 1fr; }
+		.footer-brand { grid-column: 1 / -1; }
+	}
+	@media (max-width: 540px) {
+		.footer-inner { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
 	}
 </style>

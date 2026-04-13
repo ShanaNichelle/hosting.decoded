@@ -3,6 +3,7 @@ title: 'Getting Started with Airbnb Hosting: A Complete Beginner Guide'
 description: 'Everything you need to know to launch your first Airbnb listing and start earning.'
 pubDate: 'Apr 12 2026'
 heroImage: '../../assets/blog-placeholder-1.jpg'
+category: 'Hosting 101'
 ---
 
 Starting your journey as an Airbnb host can feel overwhelming, but with the right preparation, you can set yourself up for success from day one.

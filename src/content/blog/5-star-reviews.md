@@ -3,6 +3,7 @@ title: 'The Secret to Consistently Getting 5-Star Reviews'
 description: 'Learn the habits and strategies that top-rated hosts use to maintain perfect ratings.'
 pubDate: 'Apr 10 2026'
 heroImage: '../../assets/blog-placeholder-2.jpg'
+category: 'Guest Experience'
 ---
 
 Reviews make or break your Airbnb business. Here's how successful hosts consistently earn 5-star ratings.
