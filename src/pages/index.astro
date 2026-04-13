@@ -1,0 +1,39 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>Welcome to Hosting Decoded</h1>
+			<p>
+				Your go-to resource for Airbnb hosting tips, strategies, and insights. Whether you're
+				just starting out or looking to optimize your existing listings, we've got you covered.
+			</p>
+			<p>
+				From pricing strategies to guest communication, property setup to 5-star reviews,
+				we break down everything you need to become a successful short-term rental host.
+			</p>
+			<h2>What You'll Learn</h2>
+			<ul>
+				<li>How to create listings that stand out and attract bookings</li>
+				<li>Pricing strategies to maximize your revenue</li>
+				<li>Guest communication tips for 5-star reviews</li>
+				<li>Property setup and amenities that guests love</li>
+				<li>Managing multiple properties efficiently</li>
+			</ul>
+			<p>
+				<a href="/blog">Check out the blog</a> to start learning today.
+			</p>
+		</main>
+		<Footer />
+	</body>
+</html>
