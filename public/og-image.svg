@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#FDF8F3"/>
+      <stop offset="100%" stop-color="#F0E2CC"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Left terracotta accent strip -->
+  <rect x="0" y="0" width="10" height="630" fill="#E67E50"/>
+
+  <!-- Bottom chocolate strip -->
+  <rect x="0" y="562" width="1200" height="68" fill="#3D2314"/>
+
+  <!-- ── HD monogram (centred, large) ── -->
+  <!-- H left bar -->
+  <rect x="376" y="155" width="52" height="200" fill="#3D2314"/>
+  <!-- H right bar -->
+  <rect x="480" y="155" width="52" height="200" fill="#3D2314"/>
+  <!-- H crossbar -->
+  <rect x="376" y="232" width="156" height="46" fill="#3D2314"/>
+  <!-- D left bar -->
+  <rect x="552" y="155" width="52" height="200" fill="#E67E50"/>
+  <!-- D bowl -->
+  <path d="M604 155 C700 155 740 190 740 255 C740 320 700 355 604 355 Z" fill="#E67E50"/>
+
+  <!-- Brand name -->
+  <text x="600" y="452"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="68"
+        font-weight="700"
+        text-anchor="middle"
+        fill="#3D2314">Hosting Decoded</text>
+
+  <!-- Beige rule -->
+  <rect x="440" y="470" width="320" height="2" fill="#D4A574" opacity="0.7"/>
+
+  <!-- Tagline -->
+  <text x="600" y="520"
+        font-family="Georgia, serif"
+        font-size="26"
+        text-anchor="middle"
+        fill="#3D2314"
+        opacity="0.55">Your insider guide to short-term rental success</text>
+
+  <!-- URL in bottom strip -->
+  <text x="600" y="607"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="22"
+        font-weight="600"
+        text-anchor="middle"
+        fill="#FDF8F3"
+        opacity="0.55"
+        letter-spacing="1">hostingdecoded.com</text>
+</svg>

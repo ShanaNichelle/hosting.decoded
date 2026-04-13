@@ -1,0 +1,23 @@
+{
+  "name": "Hosting Decoded",
+  "short_name": "Hosting Decoded",
+  "description": "Your insider guide to short-term rental success — tips, strategies, and insights for Airbnb hosts.",
+  "start_url": "/",
+  "display": "minimal-ui",
+  "background_color": "#FDF8F3",
+  "theme_color": "#3D2314",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo.png",
+      "type": "image/png",
+      "sizes": "1080x1080",
+      "purpose": "any"
+    }
+  ]
+}
