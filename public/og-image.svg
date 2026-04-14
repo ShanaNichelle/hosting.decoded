@@ -10,22 +10,23 @@
   <rect width="1200" height="630" fill="url(#bg)"/>
 
   <!-- Left terracotta accent strip -->
-  <rect x="0" y="0" width="10" height="630" fill="#E67E50"/>
+  <rect x="0" y="0" width="10" height="630" fill="#9C5030"/>
 
   <!-- Bottom chocolate strip -->
   <rect x="0" y="562" width="1200" height="68" fill="#3D2314"/>
 
-  <!-- ── HD monogram (centred, large) ── -->
-  <!-- H left bar -->
-  <rect x="376" y="155" width="52" height="200" fill="#3D2314"/>
-  <!-- H right bar -->
-  <rect x="480" y="155" width="52" height="200" fill="#3D2314"/>
-  <!-- H crossbar -->
-  <rect x="376" y="232" width="156" height="46" fill="#3D2314"/>
-  <!-- D left bar -->
-  <rect x="552" y="155" width="52" height="200" fill="#E67E50"/>
-  <!-- D bowl -->
-  <path d="M604 155 C700 155 740 190 740 255 C740 320 700 355 604 355 Z" fill="#E67E50"/>
+  <!-- ── HD monogram — centred at x=600, y=155–355 ── -->
+  <!-- H: left bar, right bar, crossbar — dark chocolate -->
+  <rect x="446" y="155" width="52"  height="200" fill="#3D2314"/>
+  <rect x="550" y="155" width="52"  height="200" fill="#3D2314"/>
+  <rect x="446" y="232" width="156" height="46"  fill="#3D2314"/>
+
+  <!-- D: left bar + rounded bowl touching H at x=602 — muted terracotta (matches logo) -->
+  <!-- Path: top-left → bottom-left → bottom stem → arc counter-clockwise (bowl right) → close -->
+  <path d="M 602 155 L 602 355 L 654 355 A 100 100 0 0 0 654 155 Z" fill="#9C5030"/>
+
+  <!-- White curved notch at lower-right of D bowl (matches logo detail) -->
+  <path d="M 730 308 Q 758 344 678 353" stroke="#FDF8F3" stroke-width="8" fill="none" stroke-linecap="round"/>
 
   <!-- Brand name -->
   <text x="600" y="452"

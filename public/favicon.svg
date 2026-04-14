@@ -2,12 +2,15 @@
   <!-- cream background -->
   <rect width="32" height="32" rx="5" fill="#FDF8F3"/>
 
-  <!-- H — dark chocolate -->
-  <rect x="2"  y="7"    width="4"  height="18" fill="#3D2314"/>
-  <rect x="10" y="7"    width="4"  height="18" fill="#3D2314"/>
-  <rect x="2"  y="13.5" width="12" height="5"  fill="#3D2314"/>
+  <!-- H — dark chocolate, two pillars + crossbar -->
+  <rect x="2"  y="6"    width="4"  height="20" fill="#3D2314"/>
+  <rect x="10" y="6"    width="4"  height="20" fill="#3D2314"/>
+  <rect x="2"  y="12.5" width="12" height="5"  fill="#3D2314"/>
 
-  <!-- D — terracotta, vertical bar + rounded bowl -->
-  <rect x="17" y="7" width="4" height="18" fill="#E67E50"/>
-  <path d="M21 7 C28.5 7 30.5 11 30.5 16 C30.5 21 28.5 25 21 25 Z" fill="#E67E50"/>
+  <!-- D — muted rust/terracotta, left bar + rounded bowl, touching H at x=14 -->
+  <!-- Path: top-left → bottom-left → bottom of stem → arc (counter-clockwise = bowl right) → close -->
+  <path d="M 14 6 L 14 26 L 17 26 A 10 10 0 0 0 17 6 Z" fill="#9C5030"/>
+
+  <!-- White curved notch at lower-right of D bowl (signature detail from logo) -->
+  <path d="M 24 20 Q 28 25 20 26" stroke="#FDF8F3" stroke-width="1.5" fill="none" stroke-linecap="round"/>
 </svg>
