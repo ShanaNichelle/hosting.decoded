@@ -8,7 +8,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://hostingdecoded.com',
+  site: 'https://hostingdecoded.co',
   integrations: [mdx(), sitemap()],
 
   fonts: [
