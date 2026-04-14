@@ -2,7 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
-import { SITE_TITLE } from '../consts';
+import { SITE_TITLE, SUBSCRIBE_URL } from '../consts';
 ---
 
 <!doctype html>
@@ -26,19 +26,62 @@ import { SITE_TITLE } from '../consts';
 				</p>
 				<div class="form-wrap">
 					<input
+						id="sub-email"
 						type="email"
 						placeholder="Enter your email"
 						aria-label="Email address"
 					/>
-					<button type="button">Subscribe</button>
+					<button id="sub-btn" type="button">Subscribe</button>
 				</div>
-				<p class="note">Once monthly, no spam</p>
+				<p class="note" id="sub-msg">Once monthly, no spam</p>
 			</div>
 		</section>
 
 		<Footer />
 	</body>
 </html>
+
+<script define:vars={{ SUBSCRIBE_URL }}>
+(function () {
+	const input = document.getElementById('sub-email');
+	const btn   = document.getElementById('sub-btn');
+	const msg   = document.getElementById('sub-msg');
+
+	btn.addEventListener('click', async () => {
+		const email = input.value.trim();
+		if (!email || !email.includes('@')) {
+			msg.textContent = 'Please enter a valid email address.';
+			msg.style.color = '#E67E50';
+			return;
+		}
+
+		btn.disabled    = true;
+		btn.textContent = 'Subscribing…';
+
+		try {
+			await fetch(SUBSCRIBE_URL, {
+				method:   'POST',
+				mode:     'no-cors',
+				headers:  { 'Content-Type': 'application/x-www-form-urlencoded' },
+				body:     'email=' + encodeURIComponent(email),
+			});
+			input.value     = '';
+			btn.textContent = 'Subscribed ✓';
+			msg.textContent = 'You\'re on the list! Talk soon.';
+			msg.style.color = 'rgba(253,248,243,0.65)';
+		} catch {
+			msg.textContent = 'Something went wrong — try again.';
+			msg.style.color = '#E67E50';
+			btn.disabled    = false;
+			btn.textContent = 'Subscribe';
+		}
+	});
+
+	input.addEventListener('keydown', (e) => {
+		if (e.key === 'Enter') btn.click();
+	});
+}());
+</script>
 
 <style>
 /* ── Hero ─────────────────────────────────────────────── */

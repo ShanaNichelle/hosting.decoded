@@ -5,7 +5,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import { SITE_DESCRIPTION, SITE_TITLE, SUBSCRIBE_URL } from '../consts';
 
 const allPosts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
@@ -168,14 +168,57 @@ function cc(cat?: string) {
 		<section class="newsletter">
 			<p class="nl-title">Get the best hosting tips delivered to your inbox, every month</p>
 			<div class="nl-form">
-				<input type="email" placeholder="Enter your email" aria-label="Email address" />
-				<button type="button">Subscribe</button>
+				<input id="nl-email" type="email" placeholder="Enter your email" aria-label="Email address" />
+				<button id="nl-btn" type="button">Subscribe</button>
 			</div>
+			<p class="nl-msg" id="nl-msg"></p>
 		</section>
 
 		<Footer />
 	</body>
 </html>
+
+<script define:vars={{ SUBSCRIBE_URL }}>
+(function () {
+	const input = document.getElementById('nl-email');
+	const btn   = document.getElementById('nl-btn');
+	const msg   = document.getElementById('nl-msg');
+
+	btn.addEventListener('click', async () => {
+		const email = input.value.trim();
+		if (!email || !email.includes('@')) {
+			msg.textContent = 'Please enter a valid email address.';
+			msg.style.color = '#E67E50';
+			return;
+		}
+
+		btn.disabled    = true;
+		btn.textContent = 'Subscribing…';
+
+		try {
+			await fetch(SUBSCRIBE_URL, {
+				method:  'POST',
+				mode:    'no-cors',
+				headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+				body:    'email=' + encodeURIComponent(email),
+			});
+			input.value     = '';
+			btn.textContent = 'Subscribed ✓';
+			msg.textContent = 'You\'re on the list!';
+			msg.style.color = 'var(--chocolate)';
+		} catch {
+			msg.textContent = 'Something went wrong — try again.';
+			msg.style.color = '#E67E50';
+			btn.disabled    = false;
+			btn.textContent = 'Subscribe';
+		}
+	});
+
+	input.addEventListener('keydown', (e) => {
+		if (e.key === 'Enter') btn.click();
+	});
+}());
+</script>
 
 <style>
 /* ── Layout ───────────────────────────────────────────── */
@@ -406,6 +449,11 @@ function cc(cat?: string) {
 	transition: background 0.2s;
 }
 .nl-form button:hover { background: var(--primary-dark); }
+.nl-msg {
+	font-size: 0.82rem;
+	margin: 0.6rem 0 0;
+	min-height: 1.2em;
+}
 
 /* ── Responsive ───────────────────────────────────────── */
 @media (max-width: 860px) {
