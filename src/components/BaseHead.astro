@@ -105,6 +105,15 @@ const breadcrumbSchema = Astro.url.pathname !== '/' ? {
 } : null;
 ---
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HE2NYED6P4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-HE2NYED6P4');
+</script>
+
 <!-- ── Global metadata ──────────────────────────────── -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
