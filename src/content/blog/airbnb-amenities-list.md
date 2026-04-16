@@ -1,84 +1,107 @@
 ---
-title: 'The Airbnb Amenities List That Actually Moves Bookings'
-description: 'Not all amenities are equal. This is the exact Airbnb amenities list that drives search visibility, earns 5-star reviews, and helps you stand out in your market.'
+title: 'The Airbnb Amenities List Every Host Needs (From a Superhost Who Learned the Hard Way)'
+description: 'A practical Airbnb amenities list built from real hosting experience. Learn which items guests expect as baseline, which ones drive 5-star reviews, and which "extras" are worth the investment.'
 pubDate: 'Apr 16 2026'
 heroImage: '../../assets/airbnb-amenities-list.jpg'
 category: 'Guest Experience'
 ---
 
-I've hosted hundreds of guests across my two-unit Long Beach property. In three years, I've learned that amenities are not just about comfort. They're about managing expectations, driving search visibility, and earning the kind of reviews that fill your calendar without touching a single ad.
+When I first listed my Long Beach property on Airbnb, I spent weeks agonizing over furniture and photography. I barely thought about amenities. I figured: bed, towels, WiFi. How hard could it be?
 
-This is not a generic list of 50 things you could add to your listing. This is what I've found actually matters, broken down by priority so you can spend your hosting budget wisely.
+Within my first month, I had two guests mention in their reviews that they wished there was a hair dryer. One docked me a star on "value." I had no idea guests filtered for that, expected that, or would rate me on it.
 
-## TLDR
+Three years and Superhost status later, I have a very different relationship with my amenities list. It is one of the highest-leverage things you can manage as a host, and most guides give you a generic checklist without telling you *why* each item matters or how guests actually think about it.
 
-- Mark every amenity you offer in your Airbnb listing: guests filter searches by amenities, and unlisted items cost you bookings
-- Cover the non-negotiables first, then layer in high-ROI upgrades
-- Small touches like a quality coffee setup or blackout curtains generate more review mentions than expensive additions
-- Communicate your amenities proactively in your house manual so guests feel taken care of from the moment they arrive
+Here is the framework I use, and the specific amenities that have made the biggest difference for my listing.
 
-## Why Amenities Matter More Than You Think
+---
 
-Most hosts treat amenities as a checklist to knock off before opening day. But Airbnb's platform treats them as a search filter. Guests actively filter results by amenities like WiFi, washer/dryer, self check-in, and free parking. If you have these features and haven't marked them in your listing, you're invisible to anyone searching for them.
+**TLDR: Key Takeaways**
 
-Beyond search, amenities shape expectations. A guest who books knowing exactly what to expect leaves a clean 5-star review. A guest who shows up hoping for a hair dryer and doesn't find one leaves a 4-star and a note about "missing basics." That's a review hit you can't undo.
+- Guests split amenities into two buckets: baseline expectations and delightful extras. Missing a baseline kills your reviews.
+- Airbnb's most-searched filters include WiFi, free parking, self check-in, washer/dryer, and air conditioning. These are table stakes.
+- Small, cheap items (hair dryer, iron, coffee setup) generate an outsized share of complaints when missing.
+- The amenities that drive 5-star reviews are the ones guests did not expect but genuinely appreciated.
+- Document every amenity in your house manual so guests know what is available and where to find it.
 
-According to Airbnb's own resource center, the top amenities guests search for are pool, WiFi, free parking, air conditioning or heating, kitchen access, hot tub, washer or dryer, self check-in, TV or cable, and a BBQ grill. You may not have all of these, but the ones you do have need to be visible on your listing.
+---
 
-## The Non-Negotiables
+## The Baseline Amenities Guests Expect Without Asking
 
-These are the amenities guests expect. Missing even one can trigger a complaint, a bad review, or a booking cancellation.
+There is a category of amenities that guests no longer view as extras. They are assumptions. When these are missing, guests feel misled, even if you never promised them. These are the items that generate the most avoidable negative feedback.
 
-**High-speed WiFi.** Not just "WiFi available." Guests want download speeds they can actually work with. Speed test your connection and list the Mbps in your description. Remote workers book long stays specifically based on internet quality, and this one amenity can be the difference between a 3-night stay and a 3-week stay.
+**WiFi** is non-negotiable. Guests expect it to work at video-call quality, not just load email. I now include my speed in the listing description and run a speed test screenshot to confirm. If your WiFi is slow, fix it before anything else on this list.
 
-**Fresh, quality linens.** Thread count matters less than laundering. Crisp white linens, properly stuffed pillows, and a mattress protector signal cleanliness before the guest even lies down. I use white linens on both units because they photograph better, launder cleaner, and communicate a hotel-level standard.
+**Air conditioning and heating.** In Southern California, AC is survival. Even mild weather trips get hot rooms, and guests will mention it. If your unit lacks central AC, make sure every room has a quality window unit or portable AC, and list it clearly.
 
-**A fully stocked kitchen.** A kitchen guests can actually use means oil, salt, pepper, dish soap, a sponge, a working can opener, and enough pots to cook a real meal. Guests who book a listing with a kitchen expect to use it. Don't list "kitchen" and leave them nothing to work with.
+**A washer and dryer.** Families, long-stay guests, and anyone with kids or athletic gear will filter for this. If you have it, photograph it, list it, and put the detergent pod count in your house manual.
 
-**Self check-in.** This is one of Airbnb's top search filters. A smart lock or lockbox lets guests arrive on their own schedule, skip the awkward handoff, and feel in control of their stay. Hosts who require in-person check-in at a fixed time lose bookings to those who don't.
+**Free parking.** This one surprises new hosts who are in urban areas. Guests will absolutely count street parking as "free parking," but you need to be honest about permit zones, time limits, and competition for spots. I describe exactly what parking looks like so guests know before they book.
 
-**Climate control.** Air conditioning in summer and reliable heat in winter. This generates more guest complaints than almost anything else when it's missing or broken. Test it before every turnover.
+**Self check-in.** The pandemic normalized this completely, and now guests expect it. A lockbox works, but a smart lock is better because you can change codes between stays, issue time-limited codes, and monitor entry remotely. This is one of the few "tech" investments that pays for itself quickly.
 
-**Washer and dryer.** For stays longer than two nights, this is near-essential. Guests traveling for more than a weekend expect to do laundry. If you have a shared unit, be explicit in your listing about whether it's in-unit or shared.
+**A fully functional kitchen.** "Kitchen" on Airbnb can mean a hot plate and a mini fridge. Guests who choose an Airbnb over a hotel often do so specifically to cook. I make sure my kitchens have: a working stove with all burners, an oven, a microwave, a coffee maker, a kettle, a toaster, a full set of pots and pans, plates and glasses for the max guest count, dish soap, a sponge, and paper towels. If your kitchen is limited, say so clearly in the listing.
 
-## The High-ROI Upgrades Worth the Investment
+---
 
-Once you've covered the basics, these additions give you the most return per dollar spent.
+## The Small Items That Create Huge Review Problems
 
-**Smart lock.** A one-time cost that eliminates lost keys, awkward check-ins, and rekeying fees. I have one on each unit. It also lets me grant and revoke access remotely, which makes back-to-back turnovers smoother. Guests mention it in reviews more often than you'd expect.
+These items cost almost nothing but generate a disproportionate share of guest complaints when missing. Every one of these came from a guest message or a review mention I received.
 
-**Quality coffee setup.** Skip the single-serve pod machine. A real drip coffee maker, French press, or Nespresso with a basket of pods gives guests a reason to linger and feel cared for. Coffee is inexpensive and shows up in guest reviews constantly. "Great coffee setup" is a phrase I see in my inbox all the time.
+**Hair dryer.** This is the number one amenity guests mention when it is missing. It is also one of the cheapest to provide. I keep a dedicated hair dryer in each bathroom and list it in my amenities.
 
-**Blackout curtains.** Guests don't always mention them, but they notice when they're missing. Anyone traveling with a light sleeper or a napping toddler knows the value here. They're inexpensive and make a measurable difference in sleep quality.
+**Iron and ironing board.** Business travelers and guests attending events will specifically look for this. A wrinkle-release spray is a nice backup if you have limited storage.
 
-**Welcome basket or starter snacks.** A few local snacks, a bottle of water, and a small note from you costs less than $15 and appears in more 5-star reviews than almost any other single touch. It's what guests reference when they say "they thought of everything."
+**Extra towels and bed linens.** Guests feel uncomfortable asking for more towels. I leave out two sets per guest from the start. It eliminates a common message and makes the space feel generous without costing much.
 
-**Hair dryer and iron.** These are Airbnb amenity filter items. Mark them both. A listing without a hair dryer loses every traveler who assumes she'll have one. They're small investments with outsized listing impact.
+**A phone charger or charging station.** I keep a multi-port USB hub on each nightstand. Guests mention this more than almost anything in messages.
 
-## The Small Touches That Show Up in Reviews
+**A first aid kit.** Nobody talks about this one. I added a small kit after a guest messaged me at 10pm asking if I had any bandages. It costs about $8. Every listing should have one.
 
-These don't cost much, but they separate a fine stay from one guests recommend to everyone they know.
+**Basic pantry staples.** I keep olive oil, salt, pepper, sugar, and a few coffee pods stocked as a welcome supply. Guests who arrive hungry and tired will immediately check the kitchen. Finding nothing there is a small letdown. Finding the basics is a small delight.
 
-**Extra toilet paper and paper towels.** Leave more than guests need. Running out of toilet paper mid-stay is one of the most common STR review complaints, and it's completely preventable.
+---
 
-**A phone charger or charging station.** Even a basic multi-port USB hub at the bedside gets mentioned in reviews. Guests forget chargers, and finding one waiting feels like a small miracle.
+## The Amenities That Actually Drive 5-Star Reviews
 
-**Good lighting.** Overhead lights are harsh. A bedside lamp, a floor lamp, or warm-toned bulbs throughout the space make a room feel relaxed and curated. Lighting shows up in your listing photos and in your guests' mood.
+These are not the basics. These are the items guests specifically mention in reviews as something they loved, often because they did not expect to find them.
 
-**Local recommendations.** This isn't a physical amenity, but it functions like one. A curated list of nearby restaurants, coffee spots, and things to do shows guests you're invested in their experience. I cover exactly how to structure this in my [Airbnb house manual guide](/blog/airbnb-house-manual).
+**A well-stocked welcome basket.** I put together a simple tray on the kitchen counter with: a handwritten welcome card, two water bottles, a few local snacks, and a couple of travel-size toiletries. This costs me about $12 per booking. It is mentioned in roughly one out of three of my 5-star reviews.
 
-## How to Communicate Your Amenities So Guests Notice Them
+**Hotel-quality toiletries.** The bar soap from Costco does not photograph well and does not feel luxurious. Spending $2-3 more per stay on a matching toiletry set from a brand like Grove Collaborative or Public Goods signals that you care about the details. Guests notice.
 
-Here's what most hosts get wrong: they stock the amenities but never tell guests they're there. A guest who doesn't know your coffee maker is a Nespresso won't appreciate it the same way. A guest who doesn't notice the blackout curtains will leave the sliver of light on all night.
+**Blackout curtains.** Light sleepers, parents with young children, and guests in bright-facing rooms will sleep better and rate higher. I added blackout curtains to my bedroom after two guests mentioned light as a sleep issue, and the sleep-quality comments in my reviews improved noticeably.
 
-Your house manual is where you surface all of this. A simple section that reads "Here's what you'll find in the kitchen" or "Your bedroom includes blackout curtains and a sound machine" manages expectations and makes guests feel like they're staying somewhere intentional, not incidental.
+**A Bluetooth speaker.** This is especially relevant for properties near beaches or with outdoor spaces. Guests love it, it rarely breaks, and it is easy to wipe clean between stays.
 
-I built the [Complete Airbnb Guidebook Canva template](https://shanadesigns.gumroad.com/l/airbnb-guidebook-template) specifically for this: to give hosts a polished, professional way to present their amenities, local recommendations, and house info in one document guests actually read. It takes about an hour to customize and shows up directly in your reviews.
+**Local recommendations in written form.** This is an amenity people overlook because it is not a physical object. But when a guest arrives and finds a curated list of your favorite local coffee shops, restaurants, and things to do, they feel taken care of in a way that a generic Yelp search never replicates. I include mine in my [house manual](/blog/airbnb-house-manual), and I update it seasonally.
 
-Your Airbnb listing page is also a tool, not just a formality. Go through every amenity checkbox and mark everything that applies. Coffee maker, check it. Extra blankets, check it. Dedicated workspace, mark it. Airbnb's algorithm surfaces listings with complete amenity information above those with gaps.
+---
 
-## What's Not Worth It Yet
+## How to Communicate Your Amenities So Guests Actually Read Them
 
-EV chargers, outdoor kitchens, and hot tubs get a lot of attention in hosting circles. They can justify higher nightly rates in the right market. But if you're in a competitive urban area, just starting out, or working with a limited budget, these are last priority.
+Having the right amenities is only half the job. Guests frequently do not notice what is available if it is not clearly communicated. This is where most hosts lose review points on items they actually provide.
 
-Focus first on the essentials and the high-ROI middle tier. A $20 coffee setup will move your reviews faster than a $3,000 hot tub if your WiFi is still patchy and your linens are dated. Spend your hosting dollars where guests feel the difference first.
+First, update your Airbnb listing amenity section completely. Airbnb allows you to add a huge list of checkboxes. Most hosts leave a third of them unchecked even when the items are present. Go through the full list and check everything you have. Guests filter by these tags.
+
+Second, photograph your amenities. If you have a workspace, show the chair and desk. If you have a coffee station, photograph it styled. If you have a washer and dryer, include a photo with the detergent products visible. This signals to guests that the item works and is stocked.
+
+Third, reference amenities in your welcome message. When guests check in, I send a short message pointing them to the house manual and calling out two or three things they might not think to look for: "The Bluetooth speaker is on the kitchen shelf, already paired. Extra towels are in the cabinet under the bathroom sink."
+
+If you want a system for all of this that is already built out, the [Complete Airbnb Guidebook template](https://shanadesigns.gumroad.com/l/airbnb-guidebook-template) covers the amenity section in detail, including a page layout for local recommendations and a full kitchen inventory section guests can reference during their stay.
+
+---
+
+## The Amenities Worth Investing In as You Scale
+
+If you are looking to grow your revenue, a few amenity upgrades have a clear return on investment.
+
+**A dedicated workspace.** Remote workers and digital nomads are a large and growing booking segment. A proper desk, ergonomic chair, and strong WiFi will let you add "dedicated workspace" to your listing tags and attract guests who book longer stays.
+
+**Smart home tech.** A smart thermostat, smart lock, and noise monitor cover the three things that cause the most operational headaches: temperature disputes, lockouts, and neighbor complaints. All three are solved without you needing to be on-call.
+
+**EV charging.** This is still an "extra" in most markets, but it is becoming a filter item quickly. If you have a dedicated parking space, adding a Level 2 charger puts you in a very small competitive category in most cities.
+
+The amenities conversation is ultimately about one thing: delivering what guests expect, then adding one or two things they did not expect. The former protects your rating. The latter builds it.
+
+Start with your baseline gaps, fix those first, and then layer in the small delights. That combination, done consistently, is exactly what separates a good listing from a booked-out one.
