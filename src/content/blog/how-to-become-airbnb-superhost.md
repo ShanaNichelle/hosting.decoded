@@ -1,5 +1,5 @@
 ---
-title: 'How to Become an Airbnb Superhost: A Real Host's Guide'
+title: "How to Become an Airbnb Superhost: A Real Host's Guide"
 description: 'Learn exactly how to earn and keep Airbnb Superhost status, with practical advice from a Superhost who manages two properties in Long Beach, CA.'
 pubDate: 'Apr 17 2026'
 heroImage: '../../assets/how-to-become-airbnb-superhost.jpg'
