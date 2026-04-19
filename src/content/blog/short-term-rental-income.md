@@ -1,5 +1,5 @@
 ---
-title: 'Short Term Rental Income: A Superhost's Real-Number Breakdown'
+title: "Short Term Rental Income: A Superhost's Real-Number Breakdown"
 description: 'How much can you actually earn from a short-term rental? A Long Beach Superhost breaks down real income numbers, key expenses, and the strategies that move the needle.'
 pubDate: 'Apr 19 2026'
 heroImage: '../../assets/short-term-rental-income.jpg'
