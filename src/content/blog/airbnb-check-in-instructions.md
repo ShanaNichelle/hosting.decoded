@@ -1,104 +1,123 @@
 ---
-title: 'How to Write Airbnb Check-In Instructions That Guests Actually Follow'
-description: 'Clear Airbnb check-in instructions prevent late-night messages and bad reviews. Here is the exact template and format a Superhost uses to make every arrival smooth.'
+title: 'Your Airbnb Check-In Instructions Template (What to Include and When to Send It)'
+description: 'A practical Airbnb check-in instructions template from a Long Beach Superhost. Learn exactly what to include, when to send it, and what most hosts forget.'
 pubDate: 'Apr 21 2026'
 heroImage: '../../assets/airbnb-check-in-instructions.jpg'
 category: 'Guest Experience'
 ---
 
-When I first listed my Long Beach property, I treated check-in instructions as an afterthought. I typed something quick into the Airbnb field, assumed guests would figure it out, and moved on. Then a guest messaged me at 10 PM saying she could not find the parking entrance. After that, I rebuilt my entire check-in process from scratch.
+Check-in is the first real moment your guest experiences your property. Not the listing photos, not the booking confirmation — the actual moment they arrive. If they're standing in your driveway confused about where to park, or texting you at 10 PM because they can't find the lockbox, that first impression tanks fast. And once it tanks, it's hard to recover.
 
-Good check-in instructions are not just a courtesy. They are one of the highest-leverage things a host can do to prevent late-night messages, avoidable one-star mentions, and guest frustration before the stay even starts. The format matters as much as the content.
+I've been hosting in Long Beach for three years across two units, and the single biggest driver of smooth stays is a clear, well-timed check-in message. Not a fancy app, not a printed binder (though those help too) — just a message that answers every question before the guest even has to ask.
 
-## TLDR: Key Takeaways
+Here's exactly what I put in mine.
 
-- Send a short pre-arrival message 2-3 days before check-in, separate from what Airbnb sends at 48 hours
-- Keep the access message under 200 words and put detailed property info in your guidebook
-- Cover six things: arrival method, address, parking, WiFi, check-in time, and one action step
-- Proactively address late arrivals so guests never feel stranded
-- A short instructional video for tricky entrances eliminates most late-night "I can't get in" messages
+---
 
-## Why Most Check-In Instructions Fail
+## Key Takeaways
 
-Most hosts make one of two mistakes: they write too little and leave guests guessing, or they write a wall of text that guests skip entirely. Both create the same result.
+- Send check-in instructions 48 hours before arrival, not the day of
+- Cover property access, parking, WiFi, and house rules in every message
+- Anticipate the questions guests ask most: "Where do I park?" and "How do I get in?"
+- A second, shorter confirmation message on check-in day cuts last-minute confusion
+- Your check-in instructions and your house manual are different documents — both matter
 
-There is also a timing problem. Airbnb only reveals detailed check-in instructions to guests 48 hours before arrival. If you rely solely on what you have entered in the listing editor, guests who booked three months ago have no idea how to get in until two days before their trip. Many of them will message you to ask.
+---
 
-My fix: I send a separate pre-arrival message 2-3 days before check-in. It contains the same core access info, delivered directly to the guest's inbox, in plain readable language. No hunting through the app, no confusion about where to look.
+## What to Include in Your Check-In Instructions
 
-The message is short. If I need to share more detail, such as appliance instructions, neighborhood tips, or a house rules recap, those go in my digital guest guidebook, which I link inside the same message. Guests who want more context can find it. Guests who just want to get in the door are not overwhelmed.
+Most hosts send something. The problem is what they leave out. Here's the full breakdown of what to cover:
 
-## What to Include in Your Airbnb Check-In Instructions
+**1. Property address and navigation note**
+Include the full address and a short note if GPS tends to drop guests at the wrong spot. For my Long Beach units, I add: "GPS will take you to the correct block, but park facing west — the entrance is on the north side of the building." That one sentence cuts a dozen confused texts every month.
 
-Whether you are filling in the Airbnb listing field or writing a pre-arrival message, cover these six things:
+**2. Parking instructions**
+Be specific. "Parking is available" is not enough. Tell them exactly where: a driveway number, a street with no permit required, a specific lot. Note any restrictions — street cleaning days, permit zones, or a neighbor's spot they absolutely cannot use.
 
-**1. Arrival method and access code.** Explain exactly how guests get in. If you use a keypad lock, give the code and the specific button sequence. Do not assume anything is obvious. At my main house, the code sequence is not self-evident, so I spell it out: "Press the lock icon, enter your 4-digit code, then press the unlock icon."
+**3. How to access the property**
+Walk through the access step by step. If you use a smart lock, give the code and tell them exactly where the keypad is. If there's a lockbox, describe where it's mounted. If there are multiple doors (gate, then front door), give the codes and sequence for each. Never assume a guest will figure it out.
 
-**2. Exact address and how to find the entrance.** On many properties, the front door is not the first thing guests see. If your entrance is around the side, through a gate, or past a courtyard, say so. For my Long Beach property, I note which driveway to use because there are two on the same street.
+**4. Check-in time window**
+State your standard check-in time clearly. If you allow early check-in by request, say so — but also note it's not guaranteed. This prevents guests from arriving at noon and expecting the unit to be ready.
 
-**3. Parking instructions.** Where to park, what the rules are, and whether there are any time restrictions nearby. Street parking in many cities has permit zones or overnight restrictions that guests will not know about. Include the specifics.
+**5. WiFi network and password**
+Put this in the check-in message. Yes, it's also in the house manual and on the welcome card inside. Guests want it before they walk in the door, not after they've already started hunting for it.
 
-**4. WiFi network and password.** Guests want this the moment they walk in. Put it near the top of your instructions, not buried in the last paragraph.
+**6. A brief welcome and who to contact**
+Keep it human. One or two sentences of genuine welcome, then your contact info (or your co-host's) for anything urgent. This goes a long way.
 
-**5. Check-in time and late arrival guidance.** I tell guests exactly when the space is ready, then I add one sentence: "If you are running late, no problem. The code works any time and there is no need to message me." That line alone prevents three unnecessary messages per booking.
+**7. Link to your house manual or digital guidebook**
+The check-in message is not the place for 30 house rules. Keep it focused on arrival logistics, then link to your full house manual or digital guidebook for everything else. (If you're still pulling together all of that content in one place, my [Airbnb house manual guide](/blog/airbnb-house-manual) walks through exactly what to include.)
 
-**6. One action step.** I ask guests to send me a quick message when they arrive so I know they got in without issues. This simple ask also opens natural communication if anything looks off when they walk in.
+---
 
-## How to Format Your Check-In Message
+## When to Send Your Check-In Instructions
 
-Format drives whether guests actually read what you send. A block of unbroken text gets skimmed and ignored. Here is the structure I use for every pre-arrival message:
+Timing matters as much as content.
 
-- A one-line greeting with the guest's first name
-- A single-sentence intro
-- A bulleted list of the access details
-- A closing line with my number for true emergencies
+**48 hours before arrival** is the sweet spot. Airbnb actually releases your check-in instructions to guests 48 hours before their stay begins, which is intentional. Send your personal message at the same time so everything lands together.
 
-The whole message runs under 200 words. Here is a template you can adapt:
+Sending earlier (like right after booking) is fine for a welcome note, but the actual logistics message gets ignored when check-in is still two weeks out. Guests will forget, and you'll get the questions anyway.
+
+**On check-in day**, send a shorter follow-up. Something like: "Can't wait to host you today! Here's a quick reminder of the access code: [XXXX]. Text me if anything comes up." That brief message right before arrival is what prevents the 9 PM "I can't get in" message.
+
+Do not send check-in instructions through a third-party tool only. Always make sure guests can also find it inside the Airbnb app under their trip details.
+
+---
+
+## The Questions Guests Ask Most (That Your Instructions Should Answer)
+
+After three years and dozens of guests, here are the questions I get most often when a check-in message is incomplete:
+
+- "Where exactly is parking?"
+- "Is there a gate code too, or just the front door code?"
+- "What time can I check in?"
+- "Is there a trick to the lock? It's not working."
+- "Where's the WiFi password?"
+
+If your instructions answer all five of those before the guest arrives, you'll field almost zero check-in messages. That's not just better for the guest — it's better for you.
+
+---
+
+## Check-In Instructions vs. Your House Manual: Know the Difference
+
+I see hosts conflate these two all the time, and it creates bloated check-in messages that guests don't read.
+
+Your **check-in instructions** cover arrival logistics: access, parking, timing, and a quick welcome. That's it. The message should be scannable in under two minutes.
+
+Your **house manual** covers everything else: how to use the appliances, trash day, noise policies, local recommendations, checkout steps. It's a reference document guests return to throughout their stay.
+
+Both are essential for a smooth guest experience, but they serve different moments. The check-in message is for the driveway. The house manual is for inside.
+
+If you want to go further and give guests a truly polished experience from the moment they arrive, the [Complete Airbnb Guidebook template](https://shanadesigns.gumroad.com/l/airbnb-guidebook-template) gives you a fully designed, editable Canva template that covers everything from arrival to checkout — you just fill in your property details and it's ready to share or print.
+
+---
+
+## A Simple Check-In Message Template
+
+Here's a version I've used and refined over three years. Feel free to adapt it:
 
 ---
 
 *Hi [Guest Name],*
 
-*Your stay at [Property Name] is just a few days away and I am looking forward to hosting you. Here is everything you need to arrive:*
+*We're so excited to host you! Here are the details for your arrival:*
 
-- *Address: [Full address]*
-- *Check-in time: [Time] or later*
-- *Entry: Keypad on the front door. Press the lock icon, enter [Code], then press the unlock button.*
-- *Parking: [Specific instructions]*
-- *WiFi: Network [Name] / Password [Password]*
+*Address: [Full Address]*
+*Parking: [Specific parking instructions]*
+*Check-in time: [Time] — text me if you need early access and I'll let you know if it's available.*
 
-*Send me a quick message when you arrive so I know you are all set. My number is [Phone] if you run into anything unexpected.*
+*Access: [Gate/door steps and code(s)]*
+*WiFi: Network: [Name] | Password: [Password]*
 
-*[Your name]*
+*Full house info: [Link to house manual or digital guidebook]*
+
+*I'm reachable at [Phone Number] if you run into anything. Can't wait for you to see the space!*
+
+*[Your Name]*
 
 ---
 
-Short. Specific. Scannable. Most guests read Airbnb messages on their phones while standing outside your front door. Bullet points are readable in that moment. Big paragraphs are not.
+Keep it short. Keep it specific. Make it the kind of message that lets a guest park, walk in, and exhale.
 
-## What Belongs in Your Guidebook Instead
-
-Your check-in instructions should handle one job: get guests in the door comfortably. Everything else, such as appliance how-tos, trash pickup days, neighborhood restaurant picks, house rules, and local emergency numbers, belongs in a separate guest guidebook.
-
-I keep a printed guidebook inside both units and I also send a digital link in the pre-arrival message. Guests who want full context can find it. Guests who just want to settle in are not slowed down by information they do not need at 9 PM.
-
-If you are building out your guidebook from scratch, the [Complete Airbnb Guidebook Canva template](https://shanadesigns.gumroad.com/l/airbnb-guidebook-template) covers the exact structure I use across both my properties. It is fully editable and designed to look professional without requiring design skills.
-
-For more on structuring your full property orientation, read: [How to Write Your Airbnb House Manual](/blog/airbnb-house-manual).
-
-## The Details That Make Check-In Instructions Great
-
-After three years of hosting, here are the small additions that have made the biggest difference.
-
-**Add a short video for confusing entrances.** Text descriptions only go so far. If your building has multiple entrances, or your smart lock requires a specific button sequence, a 30-second video sent through Airbnb messaging does more than any written explanation. After I recorded a quick walkthrough of my studio's keypad entry, late-night access messages dropped to zero.
-
-**Include a backup if the code does not work.** Even reliable smart locks glitch occasionally, especially after a firmware update or low battery. I put one backup option in every pre-arrival message: "If the code does not work on the first try, try [backup code] or call me at [phone]." Guests never have to panic. I rarely get called.
-
-**Keep check-in rules out of check-in instructions.** This is a common mistake. Reminders about shoes at the door, quiet hours, or trash bins belong in the house manual or a scheduled mid-stay message, not in your arrival instructions. Mixing them in creates noise and makes the critical access info harder to find.
-
-**Review your instructions every season.** Parking rules change. Lock batteries die. Property details shift. I spend five minutes at the start of each season confirming everything is still accurate. It takes almost no time and prevents the messages that would otherwise come in at midnight.
-
-## The Bottom Line
-
-Your check-in instructions set the tone for the entire stay. A guest who arrives easily, finds the WiFi immediately, and receives a warm note before they even knock feels cared for before they have set their bag down. That feeling shows up directly in your review scores and your rebooking rate.
-
-Write two versions: a short, scannable message for pre-arrival communication, and a detailed guidebook for everything else. Keep both updated. The goal is simple: when guests arrive, they should never have to wonder what to do next.
+That's what check-in instructions are for — not legal disclaimers or an essay on your house rules. Just the right information, in the right order, at the right time. Get that right and the rest of the stay tends to follow.
