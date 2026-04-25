@@ -1,0 +1,233 @@
+---
+import { Image } from 'astro:assets';
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../consts';
+import GuidebookCover from '../assets/airbnb-welcome-book-template.png';
+
+const GUIDEBOOK_URL = 'https://shanadesigns.gumroad.com/l/airbnb-guidebook-template?wanted=true';
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+	<BaseHead
+		title={`Shop — ${SITE_TITLE}`}
+		description="Hosting resources built by a Superhost. Start with the Complete Airbnb Guidebook — a designer-crafted Canva template that earns five-star reviews."
+	/>
+</head>
+<body>
+	<Header />
+
+	<section class="shop-hero">
+		<div class="shop-hero-inner">
+			<p class="shop-eyebrow">Hosting Resources</p>
+			<h1>Tools that actually improve your operation</h1>
+			<p class="shop-sub">Built by a Superhost.</p>
+		</div>
+	</section>
+
+	<section class="products">
+		<div class="products-inner">
+
+			<article class="product-card">
+				<div class="product-img-wrap">
+					<Image
+						src={GuidebookCover}
+						alt="The Complete Airbnb Guidebook Template — preview"
+						width={560}
+						height={400}
+						class="product-img"
+					/>
+				</div>
+
+				<div class="product-body">
+					<div class="product-meta">
+						<span class="product-tag">Canva Template</span>
+					</div>
+
+					<h2 class="product-title">The Complete Airbnb Guidebook</h2>
+
+					<p class="product-desc">
+						A designer-crafted, fully editable Canva template that helps guests settle in
+						quickly, reduces repeat questions, and creates the kind of stay that earns
+						five-star reviews. Built from three years of real hosting experience — not
+						a design brief.
+					</p>
+
+					<ul class="product-features">
+						<li>Fully editable in Canva — free account works</li>
+						<li>Customize in under an hour</li>
+						<li>Works for Airbnb, VRBO, and direct bookings</li>
+						<li>Instant digital download</li>
+					</ul>
+
+					<div class="checkout-wrap">
+						<a
+							href={GUIDEBOOK_URL}
+							class="buy-btn"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							Buy Now
+						</a>
+					</div>
+				</div>
+			</article>
+
+		</div>
+	</section>
+
+	<Footer />
+</body>
+</html>
+
+<style>
+/* ── Hero ───────────────────────────────────────────── */
+.shop-hero {
+	background: var(--chocolate);
+	padding: 4.5rem 2rem 5rem;
+	text-align: center;
+}
+.shop-hero-inner {
+	max-width: 640px;
+	margin: 0 auto;
+}
+.shop-eyebrow {
+	font-size: 0.72rem;
+	font-weight: 700;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	color: var(--beige);
+	margin: 0 0 1rem;
+}
+.shop-hero h1 {
+	font-size: clamp(1.9rem, 4.5vw, 3rem);
+	color: var(--cream);
+	margin: 0 0 0.75rem;
+	line-height: 1.15;
+}
+.shop-sub {
+	font-size: 1rem;
+	color: rgba(253,248,243,0.55);
+	margin: 0;
+}
+
+/* ── Products ───────────────────────────────────────── */
+.products {
+	background: var(--cream);
+	padding: 4rem 2rem 5rem;
+}
+.products-inner {
+	max-width: 1020px;
+	margin: 0 auto;
+}
+
+/* ── Product card ───────────────────────────────────── */
+.product-card {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 0;
+	background: white;
+	border-radius: 14px;
+	overflow: hidden;
+	box-shadow: var(--box-shadow);
+}
+
+.product-img-wrap {
+	background: var(--cream);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 2.5rem;
+}
+.product-img {
+	width: 100%;
+	height: auto;
+	border-radius: 8px;
+	display: block;
+	box-shadow: 0 4px 20px rgba(61,35,20,0.15);
+}
+
+.product-body {
+	padding: 2.75rem 2.5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.product-meta { margin-bottom: 0.9rem; }
+.product-tag {
+	display: inline-block;
+	font-size: 0.68rem;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: var(--primary);
+	background: rgba(230,126,80,0.1);
+	border-radius: 4px;
+	padding: 0.25em 0.65em;
+}
+
+.product-title {
+	font-size: clamp(1.5rem, 2.5vw, 2rem);
+	color: var(--chocolate);
+	margin: 0 0 1rem;
+	line-height: 1.2;
+}
+
+.product-desc {
+	font-size: 0.95rem;
+	color: rgba(61,35,20,0.72);
+	line-height: 1.7;
+	margin: 0 0 1.25rem;
+}
+
+.product-features {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.45rem;
+}
+.product-features li {
+	font-size: 0.88rem;
+	color: rgba(61,35,20,0.72);
+	padding-left: 1.4rem;
+	position: relative;
+}
+.product-features li::before {
+	content: '✓';
+	position: absolute;
+	left: 0;
+	color: var(--primary);
+	font-weight: 700;
+}
+
+/* ── CTA ────────────────────────────────────────────── */
+.checkout-wrap { display: flex; }
+.buy-btn {
+	display: inline-block;
+	padding: 0.75em 2em;
+	background: var(--chocolate);
+	color: var(--cream);
+	border-radius: 6px;
+	font-weight: 700;
+	font-size: 1rem;
+	text-decoration: none;
+	transition: background 0.2s;
+}
+.buy-btn:hover {
+	background: var(--primary);
+	color: white;
+}
+
+/* ── Responsive ─────────────────────────────────────── */
+@media (max-width: 760px) {
+	.product-card { grid-template-columns: 1fr; }
+	.product-img-wrap { padding: 2rem; }
+	.product-body { padding: 2rem 1.75rem; }
+}
+</style>
