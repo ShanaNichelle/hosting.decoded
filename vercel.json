@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/blog/pricing-strategies",
+      "destination": "/blog/airbnb-dynamic-pricing-strategy",
+      "permanent": true
+    },
+    {
+      "source": "/blog/pricing-strategies/",
+      "destination": "/blog/airbnb-dynamic-pricing-strategy/",
+      "permanent": true
+    }
+  ]
+}
