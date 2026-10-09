@@ -87,3 +87,6 @@ The hosts who are maintaining strong occupancy in this environment are not doing
 Check your local market benchmarks in AirDNA or Pricelabs at least quarterly. If your occupancy is above the local average, your strategy is working. If it is below, use this list as a diagnostic. Start with pricing, then minimum nights, then listing quality, then reviews. Work through them in order and you will find the gap.
 
 Your calendar will not fill itself, but it also does not take magic. It takes the right systems and the willingness to adjust them when the data tells you to.
+
+
+Related: [dynamic pricing strategy](/blog/airbnb-dynamic-pricing-strategy/) and [cleaning fee strategy](/blog/airbnb-cleaning-fee-strategy/).
