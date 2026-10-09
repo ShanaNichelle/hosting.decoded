@@ -215,3 +215,6 @@ Many guests assume a paid fee means light checkout only. Heavy chore lists with 
 A smart Airbnb cleaning fee strategy starts with real turnover math, local comps, and total-price awareness. Match the fee to cost, use short-stay flexibility, keep guest chores light, and review the number monthly. Protect cleanliness scores so the fee never outruns the experience.
 
 When you document checkout and house systems for guests, put them in one place they will actually open. Grab **[The Complete Airbnb Guidebook](https://shanadesigns.gumroad.com/l/airbnb-guidebook-template)** ($29 on Gumroad) if you want a Canva-ready structure you can customize in about an hour, then pair it with a fee that actually covers your cleaners.
+
+
+Related: [occupancy rate tips](/blog/airbnb-occupancy-rate-tips/) and [cleaning fee strategy](/blog/airbnb-cleaning-fee-strategy/).
