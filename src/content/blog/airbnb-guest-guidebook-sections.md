@@ -212,14 +212,14 @@ Cover the practical logistics of moving around from your property:
 
 ### 16. Checkout Instructions
 
-The checkout section is the most important section in your guidebook. It is also the one guests read most carefully because it directly affects whether they get their security deposit back.
+The checkout section is the most important section in your guidebook. It is also the one guests read most carefully because it tells them exactly what you expect before they leave. Note that Airbnb does not let most hosts charge security deposits, so damage is handled through a Host Damage Protection claim filed within 14 days of checkout.
 
 Be specific. Do not just write "please leave the space clean." Tell guests exactly what you expect:
 
 - Checkout time and the consequences of late departure
-- Whether to strip the beds or leave linens in place
-- Dishes: washed, in the dishwasher, or left for your cleaner
-- Trash: whether to take it out or leave bags by the door
+- Linens: leave them in place, do not strip the beds
+- Dishes: used dishes in the sink (Airbnb's policy for bookings from November 20, 2026 says guests shouldn't be asked to wash them)
+- Trash: separate trash and recycling into indoor bins (guests shouldn't be asked to take garbage off-site)
 - Thermostat setting before leaving
 - Door locking procedure
 - Where to leave the keys or what to do with the lockbox
