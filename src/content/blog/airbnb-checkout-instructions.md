@@ -16,7 +16,7 @@ After three years of hosting two units in Long Beach and maintaining Guest Favor
 
 - Airbnb automatically sends your checkout instructions to guests the night before departure, but only if you have written them in your listing settings first.
 - Keep the list short: 5 to 8 items is the sweet spot.
-- Include the checkout time, key or lock instructions, trash, dishes, and a personal items reminder.
+- Include the checkout time, key or lock instructions, light trash and dish requests, and a personal items reminder. Airbnb's new house rules policy applies to bookings made on or after November 20, 2026.
 - Your tone matters. Instructions that feel warm and respectful get better compliance than a list of demands.
 - Good checkout instructions double as documentation if a guest dispute ever comes up.
 
@@ -41,10 +41,10 @@ State it clearly at the top. "Please check out by 10:00 AM" leaves no room for i
 Tell guests exactly what to do with the key, lockbox code, or smart lock. For my units, I have guests leave the door locked and simply walk out. If you use a physical key, specify where to leave it. Vague instructions like "leave the key somewhere safe" lead to frantic last-minute messages on turnover days.
 
 **3. Trash and recycling**
-Guests routinely leave full trash bags inside if you do not ask them to take them out. Specify exactly which bin to use and where it is. In my case: "Please take all trash bags to the black bin on the side of the building." That sentence saves my cleaner ten minutes every single time.
+Under Airbnb's policy for bookings made on or after November 20, 2026, guests should not be asked to take garbage off-site, but you can ask them to separate trash and recycling into designated indoor bins. Specify exactly which bins to use and where they are. For example: "Please place trash and recycling in the labeled bins under the kitchen sink."
 
 **4. Dishes**
-You do not need guests to deep-clean your kitchen, but asking them to put dishes in the dishwasher and run it (if it is full) is reasonable. Specify "start the cycle if it is full" because guests often load it and then leave it sitting there.
+Airbnb's new policy says guests shouldn't be asked to wash and put away dishes, but you can ask them to put used dishes in the sink. Keep the request that simple and leave loading and running the dishwasher to your cleaner.
 
 **5. Lights, AC, and heating**
 Ask guests to turn off all lights and set the thermostat to a specific temperature, for example 72F in summer, 68F in winter. This protects your utility bill and means your cleaner does not walk into a freezing or sweltering unit.
@@ -78,8 +78,8 @@ Here is the version I use, lightly adapted so you can drop it straight into your
 
 - *Check out by 10:00 AM*
 - *Lock the front door behind you (the keypad will lock automatically)*
-- *Take all trash and recycling to the black bin outside, left of the front door*
-- *Load any dirty dishes in the dishwasher and run the cycle if it is full*
+- *Please separate trash and recycling into the labeled indoor bins*
+- *Place used dishes in the sink*
 - *Turn off all lights and set the thermostat to 72F*
 - *Check under the bed and in drawers for personal items*
 - *Enjoy the rest of your trip. We hope to see you again soon.*
